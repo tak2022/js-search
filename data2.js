@@ -1,4 +1,4 @@
-const moneylist =[
+const familylist =[
     {value:'300万円',view:'300万円'},
     {value:'325万円',view:'325万円'},
     {value:'350万円',view:'350万円'},
@@ -42,7 +42,7 @@ const moneylist =[
     {value:'2200万円',view:'2200万円'},
     {value:'2300万円',view:'2300万円'},
     {value:'2400万円',view:'2400万円'},
-    {value:'2500万円',view:'2500万円'}
+    {value:'2500万円',view:'2500万円'},
 ];
 
 
