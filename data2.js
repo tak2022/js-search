@@ -1,11 +1,11 @@
 const familylist =[
-    {value2:'独身又は共働き',view2:'独身又は共働き'},
-    {value2:'夫婦',view2:'夫婦'},
-    {value2:'共働き＋子１人（高校生）',view2:'共働き＋子１人（高校生）'},
-    {value2:'共働き＋子１人（大学生）',view2:'共働き＋子１人（大学生）'},
-    {value2:'夫婦＋子１人（高校生）',view2:'夫婦＋子１人（高校生）'},
-    {value2:'共働き＋子２人（大学生と高校生）',view2:'共働き＋子２人（大学生と高校生）'},
-    {value2:'夫婦＋子２人（大学生と高校生）',view2:'夫婦＋子２人（大学生と高校生）'}
+    {value:'独身又は共働き',view:'独身又は共働き'},
+    {value:'夫婦',view:'夫婦'},
+    {value:'共働き＋子１人（高校生）',view:'共働き＋子１人（高校生）'},
+    {value:'共働き＋子１人（大学生）',view:'共働き＋子１人（大学生）'},
+    {value:'夫婦＋子１人（高校生）',view:'夫婦＋子１人（高校生）'},
+    {value:'共働き＋子２人（大学生と高校生）',view:'共働き＋子２人（大学生と高校生）'},
+    {value:'夫婦＋子２人（大学生と高校生）',view:'夫婦＋子２人（大学生と高校生）'}
 ];
 
 
@@ -18,7 +18,7 @@ let optionString2 = '<option value="">選択ください</option>';
 familylist.forEach((item) => {
   // 都道府県ごとにvalueとnameを反映
   optionString2 +=
-    `<option value="${item.value2}">${item.view2}</option>`;
+    `<option value="${item.value}">${item.view}</option>`;
 });
 // option要素をselect要素内に追加
 selectElement2.innerHTML = optionString2;
@@ -26,7 +26,7 @@ selectElement2.innerHTML = optionString2;
 // 変更時のイベント
 selectElement2.addEventListener('change', (event) => {
   // 現在の値を取得
-  const value2 = event.target.value2;
+  const value2 = event.target.value;
 
   // メッセージを作成
   const message2 = value2 === '' ? '選択されていません' : `選択されているのは ${value2} です`;
