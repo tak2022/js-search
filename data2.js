@@ -1,48 +1,48 @@
 const familylist =[
-    {value:'300万円',view:'300万円'},
-    {value:'325万円',view:'325万円'},
-    {value:'350万円',view:'350万円'},
-    {value:'375万円',view:'375万円'},
-    {value:'400万円',view:'400万円'},
-    {value:'425万円',view:'425万円'},
-    {value:'450万円',view:'450万円'},
-    {value:'475万円',view:'475万円'},
-    {value:'500万円',view:'500万円'},
-    {value:'525万円',view:'525万円'},
-    {value:'550万円',view:'550万円'},
-    {value:'575万円',view:'575万円'},
-    {value:'600万円',view:'600万円'},
-    {value:'625万円',view:'625万円'},
-    {value:'650万円',view:'650万円'},
-    {value:'675万円',view:'675万円'},
-    {value:'700万円',view:'700万円'},
-    {value:'725万円',view:'725万円'},
-    {value:'750万円',view:'750万円'},
-    {value:'775万円',view:'775万円'},
-    {value:'800万円',view:'800万円'},
-    {value:'825万円',view:'825万円'},
-    {value:'850万円',view:'850万円'},
-    {value:'875万円',view:'875万円'},
-    {value:'900万円',view:'900万円'},
-    {value:'925万円',view:'925万円'},
-    {value:'950万円',view:'950万円'},
-    {value:'975万円',view:'975万円'},
-    {value:'1000万円',view:'1000万円'},
-    {value:'1100万円',view:'1100万円'},
-    {value:'1200万円',view:'1200万円'},
-    {value:'1300万円',view:'1300万円'},
-    {value:'1400万円',view:'1400万円'},
-    {value:'1500万円',view:'1500万円'},
-    {value:'1600万円',view:'1600万円'},
-    {value:'1700万円',view:'1700万円'},
-    {value:'1800万円',view:'1800万円'},
-    {value:'1900万円',view:'1900万円'},
-    {value:'2000万円',view:'2000万円'},
-    {value:'2100万円',view:'2100万円'},
-    {value:'2200万円',view:'2200万円'},
-    {value:'2300万円',view:'2300万円'},
-    {value:'2400万円',view:'2400万円'},
-    {value:'2500万円',view:'2500万円'},
+    {value2:'300万円',view2:'300万円'},
+    {value2:'325万円',view2:'325万円'},
+    {value2:'350万円',view2:'350万円'},
+    {value2:'375万円',view2:'375万円'},
+    {value2:'400万円',view2:'400万円'},
+    {value2:'425万円',view2:'425万円'},
+    {value2:'450万円',view2:'450万円'},
+    {value2:'475万円',view2:'475万円'},
+    {value2:'500万円',view2:'500万円'},
+    {value2:'525万円',view2:'525万円'},
+    {value2:'550万円',view2:'550万円'},
+    {value2:'575万円',view2:'575万円'},
+    {value2:'600万円',view2:'600万円'},
+    {value2:'625万円',view2:'625万円'},
+    {value2:'650万円',view2:'650万円'},
+    {value2:'675万円',view2:'675万円'},
+    {value2:'700万円',view2:'700万円'},
+    {value2:'725万円',view2:'725万円'},
+    {value2:'750万円',view2:'750万円'},
+    {value2:'775万円',view2:'775万円'},
+    {value2:'800万円',view2:'800万円'},
+    {value2:'825万円',view2:'825万円'},
+    {value2:'850万円',view2:'850万円'},
+    {value2:'875万円',view2:'875万円'},
+    {value2:'900万円',view2:'900万円'},
+    {value2:'925万円',view2:'925万円'},
+    {value2:'950万円',view2:'950万円'},
+    {value2:'975万円',view2:'975万円'},
+    {value2:'1000万円',view2:'1000万円'},
+    {value2:'1100万円',view2:'1100万円'},
+    {value2:'1200万円',view2:'1200万円'},
+    {value2:'1300万円',view2:'1300万円'},
+    {value2:'1400万円',view2:'1400万円'},
+    {value2:'1500万円',view2:'1500万円'},
+    {value2:'1600万円',view2:'1600万円'},
+    {value2:'1700万円',view2:'1700万円'},
+    {value2:'1800万円',view2:'1800万円'},
+    {value2:'1900万円',view2:'1900万円'},
+    {value2:'2000万円',view2:'2000万円'},
+    {value2:'2100万円',view2:'2100万円'},
+    {value2:'2200万円',view2:'2200万円'},
+    {value2:'2300万円',view2:'2300万円'},
+    {value2:'2400万円',view2:'2400万円'},
+    {value2:'2500万円',view2:'2500万円'}
 ];
 
 
@@ -56,7 +56,7 @@ let optionString = '<option value="">選択ください</option>';
 familylist.forEach((item) => {
   // 都道府県ごとにvalueとnameを反映
   optionString +=
-    `<option value="${item.value}">${item.view}</option>`;
+    `<option value="${item.value2}">${item.view2}</option>`;
 });
 // option要素をselect要素内に追加
 selectElement.innerHTML = optionString;
@@ -64,7 +64,7 @@ selectElement.innerHTML = optionString;
 // 変更時のイベント
 selectElement.addEventListener('change', (event) => {
   // 現在の値を取得
-  const value = event.target.value;
+  const value = event.target.value2;
 
   // メッセージを作成
   const message = value === '' ? '選択されていません' : `選択されているのは ${value} です`;
