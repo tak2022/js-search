@@ -69,7 +69,10 @@
     </select>
 
     <script>
-        const str = document.getElementById("annual_income").value;
+        const element = document.querySelector('#annual_income');
+        const value = element.value;
+        const log = '選択されているのは ${value} です';
+        document.querySelector('log').innerHTML = log;
     </script>
 </body>
 
