@@ -48,12 +48,12 @@ const familylist =[
 
 
 // select要素を参照
-const selectElement = document.querySelector('#money');
+const selectElement = document.querySelector('#family');
 
 // option要素の初期表示を作成
 let optionString = '<option value="">選択ください</option>';
 // option要素を配列から作成
-moneylist.forEach((item) => {
+familylist.forEach((item) => {
   // 都道府県ごとにvalueとnameを反映
   optionString +=
     `<option value="${item.value}">${item.view}</option>`;
@@ -70,5 +70,5 @@ selectElement.addEventListener('change', (event) => {
   const message = value === '' ? '選択されていません' : `選択されているのは ${value} です`;
 
   // 画面に表示
-  document.querySelector('.log').innerHTML = message;
+  document.querySelector('.log2').innerHTML = message;
 });
