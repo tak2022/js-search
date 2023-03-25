@@ -10,8 +10,8 @@
 
 <body>
     <input type="number" name="money" placeholder="金額を入力">
-    <select name=”annual_income” id="annual_income">
-        <option value=””>年収</option>
+    <select name=”annual_income” id="mySelect">
+        <option value=”” selected>年収</option>
         <option value=”300万円”>300万円</option>
         <option value=”325万円”>325万円</option>
         <option value=”350万円”>350万円</option>
@@ -71,10 +71,7 @@
     <p class="log"></p>
 
     <script>
-        const element = document.querySelector('#annual_income');
-        const value = element.value;
-        const log = '選択されているのは ${value} です';
-        document.querySelector('.log').innerHTML = log;
+        console.log();
     </script>
 </body>
 
